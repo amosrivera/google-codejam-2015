@@ -1,0 +1,6 @@
+[package]
+name = "haircuts"
+version = "0.1.0"
+authors = ["Amós Rivera <arivera.utpmp@gmail.com>"]
+
+[dependencies]
