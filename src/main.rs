@@ -35,9 +35,9 @@ fn get_served_by(queue: u32, barbers: Vec<u32>) -> u32{
 
     let mut count = 0;
 
-    for n in 0..queue+1 {
-        for (i,b) in barbers.iter().enumerate() {
-            if n % freq[i] == 0 {
+    for n in 0..queue {
+        for (i,f) in freq.iter().enumerate() {
+            if n % f == 0 {
                 count += 1;
                 if count == queue {
                     return (i+1) as u32;
@@ -46,7 +46,7 @@ fn get_served_by(queue: u32, barbers: Vec<u32>) -> u32{
         }
     }
 
-    return count;
+    return 0;
 }
 
 fn save(solutions: Vec<u32>) {
